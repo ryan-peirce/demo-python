@@ -37,3 +37,8 @@ def add_product(db_connection, product: Product):
 def handler(event, context):
     # Should sanitize arguments
     async_loop.run_until_complete(async_loop.create_subprocess_shell("mycommand"))
+
+    # Unsanitized shell call.
+def handler(event, context):
+    # Should sanitize arguments
+    async_loop.run_until_complete(async_loop.create_subprocess_shell("mycommand"))
